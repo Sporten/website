@@ -75,6 +75,7 @@ main div.inner{display: table; padding-top: 5%;}
 .right{
 	display: table-cell;
 	vertical-align: middle;
+	float: right;
 }
 
 .quote{
@@ -183,7 +184,7 @@ fieldset{padding:0; border:0;}
 input{
 	display: block;
 	float: left;
-	width: 78%;
+	width: 68%;
 	padding: 1em 1.5em;
 	border: 1px solid #C4C4C4;
 	border-radius: 3px;
@@ -199,7 +200,7 @@ input{
 input[type="button"]{
 	width: auto;
 	margin-left: 2%;
-	background: transparent;
+	background: #0281C3;
 	border: 1px solid #fff;
 	color: #fff;
 	cursor: pointer;
@@ -282,6 +283,25 @@ input[type="button"]:active{
 	list-style-type: : none;
 	list-style: none;
 	color: #fff;
+}
+
+#logo{
+	height: 97px;
+	width: 50%;
+	position: absolute;
+	left: 25%;
+}
+
+.signup{
+	position: absolute;
+	width: 100%;
+	bottom: -90px;
+}
+
+.thanks{
+	background-color: #0281C3;
+	border-color: white;
+	color: white;
 }
 
 

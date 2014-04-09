@@ -23,12 +23,33 @@ $(function() {
     });
 
     $('input[type=button]').click(function(){
-
-        console.log(Parse);
-
-        $('.signup > input').hide(function(){
-            $('.signup').html("<div/>Thank your for signing up with Sporten! We'll send you ONE message a week before we release the product!<div>")
+        $.ajax({
+            url: '/signUp',
+            type: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify({email: $('#email').val()}),
+            success: success, 
+            error: error
         });
+
+
+        function success (data) {
+            if (data === true) {
+                alert('This email is already registered! Thank you again!');
+            }
+            else{
+                $('.signup > input').hide(function(){
+                    $('.signup').html("<div class='thanks'>Thank your for signing up with Sporten! <br/>We'll send you ONE message a week before we release the product!</div>");
+                });    
+            }
+        }
+
+        function error (xhr, msg){
+            
+        }
+
+        
     });
 
 });
