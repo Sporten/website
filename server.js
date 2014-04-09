@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var Parse = require('Parse').Parse;
+var Parse = require('parse').Parse;
 
 app.use(express.static(__dirname + '/'));
 app.use(express.json());
