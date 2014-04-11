@@ -186,8 +186,8 @@ input{
 	float: left;
 	width: 68%;
 	padding: 1em 1.5em;
-	border: 1px solid ;
-	border-radius: 3px #0281C3;
+	border: 1px solid #0281C3;
+	border-radius: 3px;
 	outline: 0;
 	text-align: center;
 	font-size: 1.2em;
