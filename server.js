@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var Parse = require('parse').Parse;
+var https = require('https');
 
 app.use(express.static(__dirname + '/'));
 app.use(express.json());
@@ -24,7 +25,7 @@ app.get('/search', function(request, response){
   
   	var events = "";
 
-	var req = http.request(options, function(res) {
+	var req = https.request(options, function(res) {
 	  	res.setEncoding('utf8');
 
 	  	res.on('data', function (chunk) {
