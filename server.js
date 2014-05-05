@@ -11,6 +11,32 @@ app.post('/signUp', function(req, res){
 	signUp(req, res);
 });
 
+app.get('/search', function(request, response){
+
+	var url = 'api.meetup.com';
+
+	var options = {
+	  host: url,
+	  path: '/2/open_events.json?key=3e13296f673746434b1b787b55233&topic=soccer&zip=94101&sign=true',
+	  method: 'GET',
+	  port: 443
+	};
+  
+  	var events = "";
+
+	var req = http.request(options, function(res) {
+	  	res.setEncoding('utf8');
+
+	  	res.on('data', function (chunk) {
+	    	events += chunk;
+	  	});
+
+	  	res.on('end', function(){
+			response.send(events);
+		});
+	}).end();
+});
+
 function signUp(req, res){
 
 	Parse.initialize("rOWCbLpzy32pKFACWDmDUk23fyusrV4aget92Dvz", "yC3Z5jS8gXhQ8wiL2rHyfdtWHaqyZNWDiqShEuZR");
