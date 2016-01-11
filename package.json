@@ -1,11 +1,11 @@
 {
   "name": "sporten",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "sporten: bringing the tools used by the pro to all levels",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "surge -d sporten.surge.sh"
   },
   "author": "@davyengone",
   "license": "MIT",
