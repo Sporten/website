@@ -1,0 +1,17 @@
+{
+  "name": "sporten",
+  "version": "1.0.0",
+  "description": "sporten: bringing the tools used by the pro to all levels",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "deploy": "surge -d sporten.surge.sh"
+  },
+  "author": "@davyengone",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.5.0",
+    "parse": "~1.2.17",
+    "node-parse-api": "~0.2.6"
+  }
+}
